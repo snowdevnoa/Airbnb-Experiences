@@ -1,9 +1,12 @@
 import './App.css';
+import Navbar from './Navbar';
+import Hero from './Hero';
 
 function App() {
   return (
     <div className="App">
-      <p>Testing</p>
+      <Navbar />
+      <Hero />
     </div>
   );
 }
