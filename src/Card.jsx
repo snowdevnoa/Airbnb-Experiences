@@ -1,24 +1,26 @@
 export default function Card(props) {
+  console.log(props);
+
   let badgeText;
-  if (props.spots === 0) {
+  if (props.card.openSpots === 0) {
     badgeText = 'SOLD OUT';
-  } else if (props.location === 'Online') {
+  } else if (props.card.location === 'Online') {
     badgeText = 'ONLINE';
   }
 
   return (
     <div className="flex card">
       {badgeText && <div className="card--badge">{badgeText}</div>}
-      <img src={props.image} />
+      <img src={props.card.coverImg} />
       <div className="flex description">
         <img src="../public/images/star.png" alt="star" id="star" />
         <p>
-          {props.rating} ({props.count}) · USA
+          {props.card.stats.rating} ({props.card.stats.reviewCount}) · USA
         </p>
       </div>
-      <span>{props.title}</span>
+      <span>{props.card.title}</span>
       <p>
-        <strong>From ${props.price}</strong> / person
+        <strong>From ${props.card.price}</strong> / person
       </p>
     </div>
   );

@@ -7,16 +7,7 @@ import Card from './Card';
 console.log(data);
 
 function App() {
-  let cards = data.map((card) => (
-    <Card
-      image={card.coverImg}
-      rating={card.stats.rating}
-      count={card.stats.reviewCount}
-      title={card.title}
-      price={card.price}
-      spots={card.openSpots}
-    />
-  ));
+  let cards = data.map((card) => <Card key={card.id} card={card} />);
   return (
     <div className="App">
       <Navbar />
