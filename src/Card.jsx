@@ -13,7 +13,7 @@ export default function Card(props) {
       {badgeText && <div className="card--badge">{badgeText}</div>}
       <img src={props.card.coverImg} />
       <div className="flex description">
-        <img src="../public/images/star.png" alt="star" id="star" />
+        <img src="/star.png" alt="star" id="star" />
         <p>
           {props.card.stats.rating} ({props.card.stats.reviewCount}) · USA
         </p>
