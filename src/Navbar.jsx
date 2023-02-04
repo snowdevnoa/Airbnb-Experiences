@@ -1,7 +1,9 @@
 function Navbar() {
   return (
     <nav>
-      <img src="./airbnb-logo.png" />
+      <a href="https://www.airbnb.com/">
+        <img src="./airbnb-logo.png" />
+      </a>
     </nav>
   );
 }
